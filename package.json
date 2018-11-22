@@ -1,0 +1,19 @@
+{
+  "name": "lab5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcaneff/SE3316-mcaneff-lab5-Full-stack-web-application-using-Angular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcaneff/SE3316-mcaneff-lab5-Full-stack-web-application-using-Angular/issues"
+  },
+  "homepage": "https://github.com/mcaneff/SE3316-mcaneff-lab5-Full-stack-web-application-using-Angular#readme"
+}
