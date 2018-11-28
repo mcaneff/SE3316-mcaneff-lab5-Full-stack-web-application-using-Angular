@@ -53,7 +53,8 @@ import { RouterModule } from '@angular/router';
        {path:'order-success', component: OrderSuccessfulComponent},
        {path:'login', component: LoginComponent},
        {path:'admin/products', component: AdminProductsComponent},
-       {path:'admin/orders', component: AdminOrdersComponent}
+       {path:'admin/orders', component: AdminOrdersComponent},
+       {path:'my/orders', component: MyOrdersComponent}       
        ])
   ],
   providers: [],
