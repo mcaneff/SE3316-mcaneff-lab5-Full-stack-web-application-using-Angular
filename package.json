@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mcaneff/SE3316-mcaneff-lab5-Full-stack-web-application-using-Angular/issues"
   },
-  "homepage": "https://github.com/mcaneff/SE3316-mcaneff-lab5-Full-stack-web-application-using-Angular#readme"
+  "homepage": "https://github.com/mcaneff/SE3316-mcaneff-lab5-Full-stack-web-application-using-Angular#readme",
+  "dependencies": {
+    "@angular/cli": "^7.0.6"
+  }
 }
