@@ -1,5 +1,5 @@
 import { environment } from './../environments/environment';
-import { BrowserModule } from '@angular/platform-browser';  //././/enviornments.enviornment
+import { BrowserModule } from '@angular/platform-browser';  
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +20,9 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './login/login.component';
 
+
 import { RouterModule } from '@angular/router';
+import { ProductSheetComponent } from './admin/product-sheet/product-sheet.component';
 
 
 
@@ -36,7 +38,8 @@ import { RouterModule } from '@angular/router';
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    LoginComponent
+    LoginComponent,
+    ProductSheetComponent
   ],
   imports: [
      BrowserModule,
@@ -49,15 +52,19 @@ import { RouterModule } from '@angular/router';
        {path:'', component: HomeComponent},
        {path:'products', component: ProductsComponent},
        {path:'shopping-cart', component: ShoppingCartComponent},
-       {path:'checkout', component: CheckoutComponent},
+       {path:'checkout', component: CheckoutComponent },//, canActivate: [AuthGuardService]   protect the route checkout
        {path:'order-success', component: OrderSuccessfulComponent},
        {path:'login', component: LoginComponent},
        {path:'admin/products', component: AdminProductsComponent},
        {path:'admin/orders', component: AdminOrdersComponent},
-       {path:'my/orders', component: MyOrdersComponent}       
+       {path:'my/orders', component: MyOrdersComponent},
+       {path: 'admin/products/new' , component: ProductSheetComponent}
        ])
   ],
-  providers: [],
+  providers: [
+    
+    //,AuthGuardService // implementation of the service auth guard 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

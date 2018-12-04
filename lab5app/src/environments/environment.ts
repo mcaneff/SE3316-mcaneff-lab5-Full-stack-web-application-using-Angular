@@ -9,12 +9,13 @@ export const environment = {
       authDomain: "lab5-79b42.firebaseapp.com",
       databaseURL: "https://lab5-79b42.firebaseio.com",
       projectId: "lab5-79b42",
-      storageBucket: "",
+      storageBucket: "lab5-79b42.appspot.com",
       messagingSenderId: "120025962793"
   }
 };
 
 /*
+   
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
  *

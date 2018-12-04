@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "lab5-79b42"
+    "default": "lab5-79b42",
+    "StoreFront": "lab5-79b42"
   }
 }
