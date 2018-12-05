@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
@@ -42,6 +44,8 @@ import { ProductSheetComponent } from './admin/product-sheet/product-sheet.compo
     ProductSheetComponent
   ],
   imports: [
+     ReactiveFormsModule,
+     FormsModule,
      BrowserModule,
      AppRoutingModule,
      AngularFireModule.initializeApp(environment.firebase),
@@ -49,7 +53,7 @@ import { ProductSheetComponent } from './admin/product-sheet/product-sheet.compo
      AngularFireAuthModule,
      NgbModule.forRoot(),
      RouterModule.forRoot([
-       {path:'', component: HomeComponent},
+       {path:'', component: ProductsComponent},
        {path:'products', component: ProductsComponent},
        {path:'shopping-cart', component: ShoppingCartComponent},
        {path:'checkout', component: CheckoutComponent },//, canActivate: [AuthGuardService]   protect the route checkout
@@ -62,7 +66,7 @@ import { ProductSheetComponent } from './admin/product-sheet/product-sheet.compo
        ])
   ],
   providers: [
-    
+    //CategoryService
     //,AuthGuardService // implementation of the service auth guard 
   ],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from './../../category.service';
-
+import { ProductService } from './../../product.service';
 
 @Component({
   selector: 'app-product-sheet',
@@ -11,13 +11,16 @@ import { CategoryService } from './../../category.service';
 export class ProductSheetComponent implements OnInit {
   categories_;
   
-  constructor( categoryService: CategoryService ) { 
+  constructor( categoryService: CategoryService, private productService : ProductService ) { 
     this.categories_ = categoryService.getCategoriesList();
     console.log ("The following will display categories_");
-    console.log(this.categories_.name);
+    console.log(this.categories_);
   }
   
-  
+  save(product){
+    this.productService.newProduct(product);
+    console.log(product);
+  }
 ngOnInit() { }
 
 }

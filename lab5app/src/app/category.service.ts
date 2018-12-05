@@ -5,7 +5,7 @@ import { AngularFireDatabase  } from 'angularfire2/database';
   {providedIn: 'root'}
 )
 export class CategoryService {
-
+  
   constructor(private db: AngularFireDatabase) {  }
   
   getCategoriesList(){

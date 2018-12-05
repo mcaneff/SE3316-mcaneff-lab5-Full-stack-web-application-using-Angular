@@ -1,3 +1,12 @@
-<p>
-  products works!
-</p>
+<div *ngFor="let i of products_ | async"
+     class="card" style="width: 18rem;">
+      <img class="card-img-top" [src]="i.Image_URL" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{i.Product_Name}}</h5>
+        <p class="card-text">{{i.textarea}}</p>
+        <p class= "card-price">{{i.Product_Price}}</p>
+        <a href="#" class="btn btn-primary">Freedom Awaits</a>
+      </div>
+</div>
+
+

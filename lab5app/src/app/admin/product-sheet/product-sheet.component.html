@@ -1,18 +1,19 @@
-<form>
+<form #f ="ngForm" (ngSubmit)="save(f.value)" >
     <fieldset>
         <legend>Enter New Product to Upload </legend>
         <div class ="form-group">
             <label for ="Product_Name">Product Name</label>
-            <input id= "Product_Name" type = "text" class = "form-control" placeholder="Enter Product Name" style ="width:600px ">
+            <input ngModel name="Product_Name" id= "Product_Name" type = "text" class = "form-control" placeholder="Enter Product Name" style ="width:600px ">
         </div>
         
         <div class ="form-group">
             <label for ="Product_Category">Product Category</label>
-            <select id = "Product_Category"class = "form-control" placeholder="Category" style ="width:600px ">
+            <select ngModel name="Product_Category" id = "Product_Category" class = "form-control" placeholder="Category" style ="width:600px ">
                 <option value ="">test1</option>
                 <option value ="">test2</option>
                 <option value ="">test3</option>
                 <option value ="">test4</option>
+                <option value =""></option>
                 <option *ngFor="let cat of categories_ | async" [value] ="cat.$key">
                     {{cat.name}}
                 </option>
@@ -25,7 +26,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">$</span>
               </div>
-              <input id= "Product_Price" type="number" placeholder="Price" class="form-control" aria-label="Amount (to the nearest dollar)" >
+              <input ngModel name="Product_Price" id= "Product_Price" type="number" placeholder="Price" class="form-control" aria-label="Amount (to the nearest dollar)" >
               <div class="input-group-append">
                 <span class="input-group-text">.00</span>
               </div>
@@ -34,17 +35,16 @@
             
         <div class ="form-group">
             <label for ="Image_URL">Image URL</label>
-            <input id= "Image_URL" type = "text" class = "form-control" placeholder="https://exampleURl.com" style ="width:600px">
-                
+            <input ngModel name= "Image_URL" id= "Image_URL" type = "text" class = "form-control" placeholder="https://exampleURl.com" style ="width:600px">
         </div>    
             
         <div class ="form-group">
             <label for ="Product Discription">Product Discription</label>
             <p></p>
-            <textarea id="textarea" rows="3" placeholder="Enter Product Discription" style="width: 600px; height: 200px;"></textarea>
+            <textarea ngModel name="textarea" id="textarea" rows="3" placeholder="Enter Product Discription" style="width: 600px; height: 200px;"></textarea>
         </div>
         
-        <a class ="btn btn-success">Save yo Shit</a>
-        <p> AYEEEEEEEEE YEEEETTTTTTTTT<br /> </p>
+        <button [disabled]="!f.valid" class="btn btn-primary">Save</button>
     </fieldset>
+    <p>{{f.value | json}}</p>
 </form>
