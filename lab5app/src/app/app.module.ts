@@ -26,6 +26,8 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { ProductSheetComponent } from './admin/product-sheet/product-sheet.component';
 import { ProductIdComponent } from './product-id/product-id.component';
+import { DMCACopyrightComponent } from './dmca-copyright/dmca-copyright.component';
+import { EditDMCAComponent } from './edit-dmca/edit-dmca.component';
 
 
 
@@ -43,7 +45,9 @@ import { ProductIdComponent } from './product-id/product-id.component';
     AdminOrdersComponent,
     LoginComponent,
     ProductSheetComponent,
-    ProductIdComponent
+    ProductIdComponent,
+    DMCACopyrightComponent,
+    EditDMCAComponent
   ],
   imports: [
      ReactiveFormsModule,
@@ -64,7 +68,10 @@ import { ProductIdComponent } from './product-id/product-id.component';
        {path:'admin/products', component: AdminProductsComponent},
        {path:'admin/orders', component: AdminOrdersComponent},
        {path:'my/orders', component: MyOrdersComponent},
-       {path: 'admin/products/new' , component: ProductSheetComponent}
+       {path:'admin/products/new' , component: ProductSheetComponent},
+       {path:'copyright', component: DMCACopyrightComponent },
+       {path:'edit-copyright', component: EditDMCAComponent}
+
        ])
   ],
   providers: [

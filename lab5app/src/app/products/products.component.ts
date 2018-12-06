@@ -13,7 +13,7 @@ export class ProductsComponent {
      this.products_ = productService.getproducts();
   } 
   
-  addCart(id){}
+  
   
   ngOnInit() {
   }

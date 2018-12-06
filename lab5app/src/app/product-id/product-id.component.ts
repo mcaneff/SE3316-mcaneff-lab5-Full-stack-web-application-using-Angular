@@ -11,5 +11,5 @@ export class ProductIdComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }
