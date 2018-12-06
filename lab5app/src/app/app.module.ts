@@ -25,6 +25,7 @@ import { LoginComponent } from './login/login.component';
 
 import { RouterModule } from '@angular/router';
 import { ProductSheetComponent } from './admin/product-sheet/product-sheet.component';
+import { ProductIdComponent } from './product-id/product-id.component';
 
 
 
@@ -41,7 +42,8 @@ import { ProductSheetComponent } from './admin/product-sheet/product-sheet.compo
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
-    ProductSheetComponent
+    ProductSheetComponent,
+    ProductIdComponent
   ],
   imports: [
      ReactiveFormsModule,

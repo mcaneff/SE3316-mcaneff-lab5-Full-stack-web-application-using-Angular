@@ -1,1 +1,15 @@
-<a routerLink="new" class ="btn btn-primary">Add New Product</a>
+<a routerLink="/admin/products/new" class ="btn btn-primary">Add New Product</a>
+
+
+<table>
+    <tr>
+        <td>Product Name</td>
+        <td>Product Price</td>
+        <td>Other</td>
+    </tr>
+    <tr *ngFor = "let p of products">
+        <td>{{p.Product_Name}}</td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
